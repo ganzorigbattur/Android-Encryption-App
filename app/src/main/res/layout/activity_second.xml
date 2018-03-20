@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ganzorigbattur.encrypttext.secondActivity">
+
+
+    <EditText
+        android:id="@+id/key"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="3dp"
+        android:ems="10"
+        android:hint="Enter key at least 16 long"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_above="@+id/decrypt"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="13dp"
+        android:ems="10"
+        android:hint="Enter text"
+        android:inputType="textMultiLine" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/key"
+        android:layout_centerHorizontal="true"
+        android:text="Text:"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/decrypt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="28dp"
+        android:layout_marginEnd="36dp"
+        android:onClick="decryptClicked"
+        android:text="Decrypt" />
+
+    <Button
+        android:id="@+id/encrypt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/decrypt"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="18dp"
+        android:onClick="encryptClicked"
+        android:text="Encrypt" />
+
+</RelativeLayout>
